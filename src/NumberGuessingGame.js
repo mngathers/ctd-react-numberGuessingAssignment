@@ -14,7 +14,8 @@ function getRandomNumber() {
 const MAX_ATTEMPTS = 5;
 
 function NumberGuessingGame() {
-  const [numberToGuess, setNumberToGuess] = useState(getRandomNumber());
+  const [numberToGuess, setNumberToGuess] = useState(getRandomNumber);
+  console.log(numberToGuess);
   const [numberOfGuesses, setNumberOfGuesses] = useState(0);
   const [latestGuess, setLatestGuess] = useState(null);
 
@@ -28,7 +29,7 @@ function NumberGuessingGame() {
   };
 
   const handleReset = () => {
-    setNumberToGuess(getRandomNumber());
+    setNumberToGuess(getRandomNumber);
     setNumberOfGuesses(0);
     setLatestGuess(null);
   };
